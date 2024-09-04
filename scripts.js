@@ -38,14 +38,31 @@ newFunction('parking lot')
 
 console.group('exercise 4')
 // Declare a global variable here
-let monkFlip = jumpKick
+let game = 'pokemon'
 function modifyGlobal() {
     // Try to modify the global variable here
-    let monkFlip = 'owie'
+    game = 'dev'
+    console.log(game)
 }
 
 function localScopeTest() {
     // Declare a local variable with the same name as the global variable
+    let game = 'death'
+    console.log(game)
+}
+// Call both functions here
+localScopeTest()
+modifyGlobal()
+
+console.group('exercise 5')
+function functionFactory(param) {
+    // Return a function that makes use of 'param'
+    this.name = param
 }
 
-// Call both functions here
+// Create an instance of the inner function by invoking functionFactory with a parameter
+function parking(){
+    functionFactory.call(this, param)
+}
+
+console.log(functionFactory)
