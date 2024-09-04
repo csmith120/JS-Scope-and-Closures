@@ -1,4 +1,4 @@
-console.group('first exercise')
+console.group('first exercise');
 function outerFunction() {
 	let outerVar = "I'm outside!";
 
@@ -13,17 +13,17 @@ function outerFunction() {
 
 outerFunction();
 
-console.group('exercise 2')
+console.group('exercise 2');
 function mainFunction() {
 	// Call the hoistedFunction here
     const x = 'shales king';
 	// Now, declare the hoistedFunction below
     console.log(x);
-}
+};
 
 mainFunction();
 
-console.group('exercice 3')
+console.group('exercice 3');
 function tellerTooth(outerVariable) {
 const outer2 = 'dev stuff'
     return function innerFunction(innerVariable) {
@@ -31,38 +31,39 @@ const outer2 = 'dev stuff'
         console.log('Inner variable ' + innerVariable)
         console.log(outer2)
     }
-}
+};
 
 const newFunction = tellerTooth('deli')
 newFunction('parking lot')
 
-console.group('exercise 4')
+console.group('exercise 4');
 // Declare a global variable here
 let game = 'pokemon'
 function modifyGlobal() {
     // Try to modify the global variable here
     game = 'dev'
     console.log(game)
-}
+};
 
 function localScopeTest() {
     // Declare a local variable with the same name as the global variable
     let game = 'death'
     console.log(game)
-}
+};
 // Call both functions here
-localScopeTest()
-modifyGlobal()
+localScopeTest();
+modifyGlobal();
 
-console.group('exercise 5')
+console.group('exercise 5');
+param = 1
 function functionFactory(param) {
     // Return a function that makes use of 'param'
-    this.name = param
-}
+    let clusterShell = param + 10
+    console.log(clusterShell)
+};
 
 // Create an instance of the inner function by invoking functionFactory with a parameter
-function parking(){
-    functionFactory.call(this, param)
-}
+functionFactory();
 
-console.log(functionFactory)
+console.group('exercise 6');
+
