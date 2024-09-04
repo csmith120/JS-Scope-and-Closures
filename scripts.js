@@ -67,3 +67,13 @@ functionFactory();
 
 console.group('exercise 6');
 
+function hoistingTest() {
+    // Try printing a variable here
+    console.log(dunes)
+    // Declare the variable after the console.log
+    var dunes = 'rage quite'
+}
+
+hoistingTest();
+
+console.group('exercise 7')
