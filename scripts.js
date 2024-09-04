@@ -77,3 +77,13 @@ function hoistingTest() {
 hoistingTest();
 
 console.group('exercise 7')
+
+function setupCounter() {
+    // Define a count variable here
+    
+    return function() {
+        // Increment and print the count
+    }
+}
+
+// Create a counter instance and invoke it to test
