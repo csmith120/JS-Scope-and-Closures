@@ -94,3 +94,6 @@ function setupCounter() {
 
 // Create a counter instance and invoke it to test
 setupCounter();
+console.log(setupCounter())
+
+console.group('exercise 8')
