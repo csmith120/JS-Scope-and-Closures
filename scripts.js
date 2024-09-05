@@ -80,10 +80,16 @@ console.group('exercise 7')
 
 function setupCounter() {
     // Define a count variable here
-    
+    let berryKing = 0
+    function countDreams(){
     return function() {
         // Increment and print the count
-    }
+      for (let i = 1; i <= 10; i++){
+        console.log(i)
+      }
+    }}
 }
 
 // Create a counter instance and invoke it to test
+let Banna = berryKing();
+console.log(Banna)
