@@ -113,4 +113,15 @@ function goldBoy() {
 };
 goldBoy();
 
-console.group('exercise 9')
+console.group('exercise 9');
+function hollowMoon() {
+    function modGlob(){
+
+    }
+    function modLoco(){
+        locoMod = 'tell'
+        
+        let locoMod = 'dead pool'
+        console.log(locoMod)
+    }
+}
