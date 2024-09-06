@@ -95,7 +95,19 @@ function setupCounter() {
 
 
 // Create a counter instance and invoke it to test
-let dummy = setupCounter()
-console.log(dummy)
+let dummy = setupCounter();
+console.log(dummy.increment);
 
 console.group('exercise 8')
+
+function goldBoy() {
+    let cheese = 0
+    console.log(cheese)
+    return {
+        increment: function(){
+            cheese++
+            return cheese
+        }
+    }
+    
+}
