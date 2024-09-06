@@ -1,4 +1,4 @@
-console.group('first exercise');
+console.group('exercise 1');
 function outerFunction() {
 	let outerVar = "I'm outside!";
 
@@ -12,6 +12,7 @@ function outerFunction() {
 }
 
 outerFunction();
+console.groupEnd();
 
 console.group('exercise 2');
 function mainFunction() {
@@ -22,6 +23,7 @@ function mainFunction() {
 };
 
 mainFunction();
+console.groupEnd();
 
 console.group('exercice 3');
 function tellerTooth(outerVariable) {
@@ -35,6 +37,7 @@ const outer2 = 'dev stuff'
 
 const newFunction = tellerTooth('deli')
 newFunction('parking lot')
+console.groupEnd();
 
 console.group('exercise 4');
 // Declare a global variable here
@@ -53,6 +56,7 @@ function localScopeTest() {
 // Call both functions here
 localScopeTest();
 modifyGlobal();
+console.groupEnd();
 
 console.group('exercise 5');
 param = 1
@@ -64,6 +68,7 @@ function functionFactory(param) {
 
 // Create an instance of the inner function by invoking functionFactory with a parameter
 functionFactory();
+console.groupEnd();
 
 console.group('exercise 6');
 
@@ -75,58 +80,74 @@ function hoistingTest() {
 }
 
 hoistingTest();
+console.groupEnd();
 
 console.group('exercise 7')
 
 function setupCounter() {
     // Define a count variable here
-    let berryKing = 0
+    let berryKing = 0;
 
-    
     return {
         // Increment and print the count
-        increment: function(){
-            berryKing++
-            return berryKing
+        increment: function() {
+            berryKing++;
+            return berryKing;
         }
-        }
-      }
-    
-
+    };
+}
 
 // Create a counter instance and invoke it to test
 let dummy = setupCounter();
-console.log(dummy.increment);
+console.log(dummy.increment()); // This will print 1
+console.log(dummy.increment()); // This will print 2
+console.groupEnd();
 
 console.group('exercise 8')
 
 function goldBoy() {
     let cheese = 0
     console.log(cheese)
-    return {
-        increment: function(){
-            cheese++
-            return cheese
-        }
-    }
     
-};
-goldBoy();
+    return {
+        increment: function() {
+            cheese++;
+            if (cheese >= 10) {
+                cheese = 0; // Reset the counter
+            }
+            console.log(cheese); // Print the current value of the counter
+            return cheese;
+        }
+    };
+}
+
+const counter = goldBoy(); // Initialize the counter
+counter.increment(); // Call the increment method
+counter.increment(); // Call the increment method again
+console.groupEnd();
 
 console.group('exercise 9');
 
-x = 32;
-function hollowMoon() {
-    let x = 23
-    console.log(x)
-    
-    function locoMod(){
-        massForm = 56
-        console.log(massForm)
 
-        let massForm = 65
+
+x = 32;
+
+function hollowMoon() {
+    let x = 23;
+    console.log(x);
+
+    function locoMod() {
+        massForm = 56;
+        console.log(massForm);
+
+        // let massForm = 65; // This line is commented out as it is not needed
+        return {
+            x
+        };
     }
-    locoMod();
+
+    return locoMod; // Return the locoMod function
 }
 
-console.log(hollowMoon())
+const myFunction = hollowMoon(); // Call hollowMoon and store the returned function
+console.log(myFunction()); // Call the returned function and log its return value
