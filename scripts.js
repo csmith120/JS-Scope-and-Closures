@@ -114,18 +114,19 @@ function goldBoy() {
 goldBoy();
 
 console.group('exercise 9');
+
+x = 32;
 function hollowMoon() {
-    let massForm = 'dead mass'
-    function modGlob(){
-        massForm = 'big mass'
+    let x = 23
+    console.log(x)
+    
+    function locoMod(){
+        massForm = 56
+        console.log(massForm)
+
+        let massForm = 65
     }
-    function modLoco(){
-        locoMod = 'tell'
-        
-        let locoMod = 'dead pool'
-        console.log(locoMod)
-    }
-    modGlob();
-    modLoco();
-    console.log(massForm)
+    locoMod();
 }
+
+console.log(hollowMoon())
