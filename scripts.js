@@ -111,3 +111,6 @@ function goldBoy() {
     }
     
 };
+goldBoy();
+
+console.group('exercise 9')
